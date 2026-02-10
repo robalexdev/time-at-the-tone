@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time at the tone</title>
+    <style>
+      body {
+        margin: auto;
+        max-width: 50em;
+        background-color: #edc;
+        padding: 2em;
+        height: 100%;
+        overflow: hidden;
+        border: 0.5em solid #222;
+        outline: 0.3em solid #222;
+        outline-offset: -1em;
+      }
+      progress {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 1.3em;
+      }
+      h1 {
+        font-weight: 800;
+        font-size: 3em;
+        text-align: center;
+        margin-bottom: 1.3em;
+        letter-spacing: 0.06em;
+      }
+    </style>
+    <script data-goatcounter="https://alexsci.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Time-at-the-Tone Service</h1>  
+
+      <details>
+        <summary>
+          <b>What is this?</b>
+        </summary>
+        <p>
+        This web page will produce a tone at the top of each minute, allowing you to manually synchronize clocks.
+
+        <p>
+        The accuracy of this approach depends on your reaction time.
+        A three beep countdown can be used to anticipate the top-of-the-minute tone.
+        I've been able to synchronize wall clocks (like the one on my oven and microwave) with an error below what I can perceive.
+
+        <p>
+        Keep in mind, your computer clock may not be well-synchronized with other clocks or references.
+        You can <a href="https://time.gov">check your synchronization with UTC(NIST)</a> if you'd like a trusted reference point.
+
+        <p>
+        Beware that the time displayed on your device may lag behind the system time.
+        On my computer, the clock in the taskbar lags behind the system time by about one second.
+        These clocks are designed to be references, not precision timers.
+
+      </details>
+
+      <noscript>
+        <p>
+        Hello <b>noscript</b> user!
+        This time synchronization application requires JavaScript to operate, enable JavaScript if you'd like to run the application.
+
+        <p>
+        Note: I also collect page view counts using <a href="https://www.goatcounter.com/">GoatCounter</a>,
+        which is a privacy-oriented, JavaScript-based analytics tool that does not perform tracking of personal data.
+      </noscript>
+
+      <p>
+      <span id="top-of-minute-action">
+        When the progress bar fills, the time will be:
+      </span>
+      <span id="time-will-be">
+      </span>
+      </p>
+
+      <p aria-live="off" id="countdown"></p>
+      <progress id="progress" value="0" max="60000"></progress>
+      <br />
+      <br />
+
+      <div id="request-audio">
+        <input type="button" id="request-audio-button" value="Enable Sound">
+      </div>
+    </main>
+    <script defer src="index.js"></script>
+  </body>
+</html>
+
