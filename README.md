@@ -1,3 +1,7 @@
+> [!CAUTION]
+> [This repo has moved to GitLab](https://gitlab.com/robalexdev/time-at-the-tone)
+
+
 This project is a client-side web application that produces a tone at the top of each minute, allowing you to manually synchronize clocks.
 
 The accuracy of this approach depends on your reaction time. A three beep countdown can be used to anticipate the top-of-the-minute tone. I've been able to synchronize wall clocks (like the one on my oven and microwave) with an error below what I can perceive.
